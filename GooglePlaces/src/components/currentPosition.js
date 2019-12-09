@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import MapView from "react-native-maps";
 
-import Permissions from 'react-native-permissions';
+import {request, PERMISSIONS} from 'react-native-permissions';
+
 
 export default class CurrentPosition extends Component {
 	state = {
@@ -22,6 +23,14 @@ export default class CurrentPosition extends Component {
 		//   alert('lütfen konum izinlerini verin.');
 		//   return false;
 		// }
+
+		request(PERMISSIONS.ANDROID.ACCESS_COARSE_LOCATION).then(result => {
+			// …
+			if (result !== 'granted') {
+			  alert('lütfen konum izinlerini verin.');
+			  return false;
+			}
+		  });
 
 		const {coords} = await this.getCurrentPosition();
 		this.setState({
