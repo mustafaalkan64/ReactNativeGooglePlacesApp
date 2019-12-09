@@ -7,8 +7,8 @@ import Permissions from 'react-native-permissions';
 export default class currentPosition extends Component {
 	state = {
 		region: {
-			latitude: 2.0087,
-			longitude: 4.0173,
+			latitude: 35.0087,
+			longitude: 35.0173,
 			latitudeDelta: 0.0922,
 			longitudeDelta: 0.0421,
 		},
