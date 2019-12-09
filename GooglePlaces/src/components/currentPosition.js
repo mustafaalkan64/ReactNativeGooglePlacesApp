@@ -4,7 +4,7 @@ import MapView from "react-native-maps";
 
 import Permissions from 'react-native-permissions';
 
-export default class currentPosition extends Component {
+export default class CurrentPosition extends Component {
 	state = {
 		region: {
 			latitude: 35.0087,
@@ -14,12 +14,14 @@ export default class currentPosition extends Component {
 		},
 	};
 
-	async componentDidMnt() {
-		const permission = await Permissions.request('location');
-		if (permission !== 'authorized') {
-		  alert('lütfen konum izinlerini verin.');
-		  return false;
-		}
+	async componentDidMount() {
+		// alert(permission);
+		// const permission = await Permissions.request(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
+		
+		// if (permission !== 'authorized') {
+		//   alert('lütfen konum izinlerini verin.');
+		//   return false;
+		// }
 
 		const {coords} = await this.getCurrentPosition();
 		this.setState({

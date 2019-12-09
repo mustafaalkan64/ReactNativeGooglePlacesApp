@@ -48,6 +48,8 @@ export default class Markers extends Component {
 		return (
 			<View style={styles.container}>
 				<MapView
+					loadingEnabled={true}
+					showsUserLocation={true}
 					style={styles.map}
 					region={this.state.region}
 				>
