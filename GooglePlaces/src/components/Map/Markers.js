@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import MapView, {Marker} from "react-native-maps";
 
-import AnimatedMarker from './animatedMarkers';
+import AnimatedMarker from './AnimatedMarkers';
 
 export default class Markers extends Component {
 	state = {
