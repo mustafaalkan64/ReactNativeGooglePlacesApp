@@ -17,11 +17,11 @@ export default class PlacesItem extends Component {
 	};
 
 	render() {
-		const {items} = this.props.item;
+		const {photos} = this.props.item;
 
 		let source;
-		if (items) {
-			source = {uri: `${API_ENDPOINT}/photo?maxwidth=400&photoreference=${items[0].photo_reference}&key=${API_KEY}`}
+		if (photos) {
+			source = {uri: `${API_ENDPOINT}/photo?maxwidth=400&photoreference=${photos[0].photo_reference}&key=${API_KEY}`}
 		} else {
 			source = require('../../assets/no-image.jpg')
 		}
