@@ -5,7 +5,7 @@ import MapView, {Marker} from "react-native-maps";
 import {request, PERMISSIONS} from 'react-native-permissions';
 import {API_KEY, API_ENDPOINT} from '../../consts';
 import axios from 'axios';
-import Places from '../Places/Index';
+import Places from '../Places';
 
 
 export default class CurrentPosition extends Component {
